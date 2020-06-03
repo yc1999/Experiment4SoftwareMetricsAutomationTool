@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" class="loading">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description"
+    content="Convex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+  <meta name="keywords"
+    content="admin template, Convex admin template, dashboard template, flat admin template, responsive admin template, web app">
+  <meta name="author" content="PIXINVENT">
+  <title>软件度量实验</title>
+  <link rel="apple-touch-icon" sizes="60x60" href="app-assets/img/ico/apple-icon-60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="app-assets/img/ico/apple-icon-76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="app-assets/img/ico/apple-icon-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="app-assets/img/ico/apple-icon-152.png">
+  <link rel="shortcut icon" type="image/x-icon" href="app-assets/img/ico/favicon.ico">
+  <link rel="shortcut icon" type="image/png" href="app-assets/img/ico/favicon-32.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link
+    href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="app-assets/fonts/feather/style.min.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/fonts/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/perfect-scrollbar.min.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/prism.min.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickadate/pickadate.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+  <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/wizard.css">
+</head>
+
+<body data-col="2-columns" class=" 2-columns ">
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+  <div class="wrapper">
+
+
+    <div data-active-color="white" data-background-color="crystal-clear" data-image="app-assets/img/sidebar-bg/08.jpg"
+      class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="logo clearfix"><a href="index.html" class="logo-text float-left">
+            <span class="text align-middle">软件度量实验</span>
+          </a><a id="sidebarToggle" href="javascript:;" class="nav-toggle d-none d-sm-none d-md-none d-lg-block"><i
+              data-toggle="expanded" class="ft-disc toggle-icon"></i></a><a id="sidebarClose" href="javascript:;"
+            class="nav-close d-block d-md-block d-lg-none d-xl-none"><i class="ft-circle"></i></a></div>
+      </div>
+      <div class="sidebar-content">
+        <div class="nav-container">
+          <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
+            <li><a href="index.html" ><i class="icon-equalizer"></i>首页</a>
+            </li>
+            <li  class="active"><a href="FPMetrics.html"><i class="icon-speedometer"></i>功能点度量</a>
+            </li>
+            <li><a href="UCPMetrics.html"><i class="icon-grid"></i>用例点度量</a>
+            </li>
+            <li ><a href="VG.html" ><i class="icon-puzzle"></i>圈复杂度度量</a>
+            </li>
+            <li><a href="CKMetrics.html" ><i class="icon-pie-chart"></i>面向对象CK度量</a>
+            </li>
+            <li><a href="LKMetrics.html"><i class="icon-bar-chart"></i>面向对象LK度量</a>
+            </li>
+            <li  ><a href="countCode.html" ><i class="icon-support"></i>代码行度量</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+      <div class="sidebar-background"></div>
+    </div>
+
+    <div class="main-panel">
+      <div class="main-content">
+        <div class="content-wrapper">
+          <div class="container-fluid">
+            <!-- Wizard Starts -->
+            <section id="icon-tabs">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="card-title-wrap bar-danger">
+                        <h4 class="card-title">功能点度量方法</h4>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-block">
+                        <form class="icons-tab-steps wizard-circle">
+                          <!-- Step 1 -->
+                          <h6>划分功能点</h6>
+                          <fieldset>
+                            <!-- 上传XML文件 -->
+                            <div class="row">
+                              <div class="col-lg-11 col-md-11">
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">上传文件</span>
+                                  </div>
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputFile">
+                                    <label class="custom-file-label" for="inputGroupFile01" id="fileName">选择文件</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-1 col-md-1">
+                                <a class="btn mr-1 btn-success" id="checkBtn">确定</a>
+                              </div>
+                            </div>
+
+                            <div id="step1">
+                              <h4 class="form-section">
+                                <i class="icon-pin"></i>
+                                划分功能点类型
+                              </h4>
+                              <div class="row" id="checkFunctionArea">
+                              </div>
+                            </div>
+                          </fieldset>
+
+                          <!-- Step 2 -->
+                          <h6>计算未调整的功能点</h6>
+                          <fieldset>
+                            <div id="eiArea">
+                              <h4 class="form-section">
+                                <i class="icon-pin"></i>
+                                设置外部输入复杂程度
+                              </h4>
+                              <div>
+                              </div>
+                              <div class="row" id="eiTypeSelector">
+                              </div>
+                            </div>
+
+                            <div id="eoArea">
+                              <h4 class="form-section">
+                                <i class="icon-pin"></i>
+                                设置外部输出复杂程度
+                              </h4>
+                              <div>
+                              </div>
+                              <div class="row" id="eoTypeSelector">
+                              </div>
+                            </div>
+
+                            <div id="eqArea">
+                              <h4 class="form-section">
+                                <i class="icon-pin"></i>
+                                设置外部查询复杂程度
+                              </h4>
+                              <div>
+                              </div>
+                              <div class="row" id="eqTypeSelector">
+                              </div>
+                            </div>
+
+                            <div id="ilfArea">
+                              <h4 class="form-section">
+                                <i class="icon-pin"></i>
+                                设置内部逻辑文件复杂程度
+                              </h4>
+                              <div>
+                              </div>
+                              <div class="row" id="ilfTypeSelector">
+                              </div>
+                            </div>
+                            
+                            <div id="eifArea">
+                              <h4 class="form-section">
+                                <i class="icon-pin"></i>
+                                设置外部接口文件复杂程度
+                              </h4>
+                              <div>
+                              </div>
+                              <div class="row" id="eifTypeSelector">
+                              </div>
+                            </div>
+
+                            <!--显示计算得到的未调整的功能点数-->
+                            <div class="row">
+                              <div class="col-lg-3 col-md-2">
+                              </div>
+                              <div class="col-lg-3 col-md-2">
+                              </div>
+                              <div class="col-lg-3 col-md-2">
+                              </div>
+                              <div class="col-lg-3 col-md-2">
+                                <fieldset>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <button class="btn btn-info" type="button">未调整的功能点数</button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" id="ufc" disabled>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+
+                          </fieldset>
+
+                          <!-- Step 3 -->
+                          <h6>计算技术复杂性因子</h6>
+                          <fieldset>
+                            <div id="usecasesArea">
+                              <h4 class="form-section">
+                                <i class="icon-pin"></i>
+                                设置技术复杂性因子
+                              </h4>
+                              <div class="row" id="FactorSelector">
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-3 col-md-2">
+                                </div>
+                                <div class="col-lg-3 col-md-2">
+                                </div>
+                                <div class="col-lg-3 col-md-2">
+                                </div>
+                                <div class="col-lg-3 col-md-2">
+                                  <fieldset>
+                                    <div class="input-group">
+                                      <div class="input-group-prepend">
+                                        <button class="btn btn-info" type="button">技术复杂性因子</button>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="" id="vaf" disabled>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+
+
+                          <!-- Step 4 -->
+                          <h6>计算调整后的功能点</h6>
+                          <fieldset>
+                            <div class="row">
+                              <div class="col-lg-4">
+                                <blockquote class="blockquote">
+                                  <p class="mb-0">FP = UFC * VAF
+                                  </p>
+                                </blockquote>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-lg-3 col-md-2">
+                                <fieldset>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <button class="btn btn-info" type="button">功能点</button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" id="fp" disabled>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+
+                            <!--人时-->
+                            <div class="row">
+                              <div class="col-lg-3">
+                                <div class="form-group">
+                                  <label for="humanhour" class="text-bold-400">请输入完成一个功能点需要的人时</label>
+                                  <div class="input-group">
+                                    <input type="text" id="humanhour" name="humanhour" class="form-control"
+                                      placeholder="28">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        人时
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--单位换算-->
+                            <div class="row">
+                              <div class="col-lg-3">
+                                <div class="form-group">
+                                  <label for="monthhour" class="text-bold-400">请输入一个人月对应的人时</label>
+                                  <div class="input-group">
+                                    <input type="text" id="monthhour" name="monthhour" class="form-control"
+                                      placeholder="167">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        人时
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--结果-->
+                            <div class="row">
+                              <div class="col-lg-3 col-md-2">
+                                <fieldset>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <button class="btn btn-info" type="button">预计工作量</button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" id="effort" disabled>
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">
+                                        人月
+                                      </span>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </fieldset>
+
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Wizard Ends -->
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer footer-static footer-light">
+        <p class="clearfix text-muted text-center px-2"><span>Copyright &copy; 2020 <a href="https://www.csu.edu.cn"
+              id="pixinventLink" target="_blank" class="text-bold-800 primary darken-2">CSU</a>, All rights reserved.
+          </span></p>
+      </footer>
+
+    </div>
+  </div>
+  <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+  <!-- BEGIN VENDOR JS-->
+  <script src="app-assets/vendors/js/core/jquery-3.3.1.min.js"></script>
+  <script src="app-assets/vendors/js/core/popper.min.js"></script>
+  <script src="app-assets/vendors/js/core/bootstrap.min.js"></script>
+  <script src="app-assets/vendors/js/perfect-scrollbar.jquery.min.js"></script>
+  <script src="app-assets/vendors/js/prism.min.js"></script>
+  <script src="app-assets/vendors/js/jquery.matchHeight-min.js"></script>
+  <script src="app-assets/vendors/js/screenfull.min.js"></script>
+  <script src="app-assets/vendors/js/pace/pace.min.js"></script>
+  <!-- BEGIN VENDOR JS-->
+  <!-- BEGIN PAGE VENDOR JS-->
+  <script src="app-assets/vendors/js/jquery.steps.min.js"></script>
+  <script src="app-assets/vendors/js/pickadate/picker.js"></script>
+  <script src="app-assets/vendors/js/pickadate/picker.date.js"></script>
+  <script src="app-assets/vendors/js/pickadate/picker.time.js"></script>
+  <script src="app-assets/vendors/js/pickadate/legacy.js"></script>
+  <script src="app-assets/vendors/js/jquery.validate.min.js"></script>
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN CONVEX JS-->
+  <script src="app-assets/js/app-sidebar.js"></script>
+  <script src="app-assets/js/notification-sidebar.js"></script>
+  <!-- END CONVEX JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
+  <script src="app-assets/js/wizard-steps.js"></script>
+  <!-- END PAGE LEVEL JS-->
+
+  <script>
+    /*——————————————————————————————————————————————————————————————————————
+    |全局变量定义区
+    ——————————————————————————————————————————————————————————————————————*/
+    var data;
+
+    //设置五种功能单元的类型数组
+    var fun = new Array();
+
+    //定义未调整的功能点数
+    var ufc = 0;
+    var ei = 0;
+    var eo = 0;
+    var eq = 0;
+    var ilf = 0;
+    var eif = 0;
+
+    //技术复杂性因子
+    var vaf = 0.65;
+
+    //功能点
+    var fp=0;
+
+
+    $("#step1").hide()
+    // $("#usecasesArea").hide()
+    // $("#uucpArea").hide()
+
+
+    //加载技术复杂因子界面
+    var factors = new Array("数据通信", "分布式数据处理", "性能", "使用强度高的配置", "交易速度", "在线数据输入", "终端用户效率", "在线更新", "复杂处理", "可重用性", "易安装性", "易操作性", "多场所","容易变更")
+
+    for (var i = 0; i < 14; i++) {
+      var element =
+        '<div class="col-md-2">' +
+        '<fieldset class="form-group">' +
+        '<label for="' + 'factor' + i + '" class="font-medium-1 text-bold-400">' + factors[i] + '</label>' +
+        '<select id="' + 'factor' + i + '" name="interested" class="form-control factor">' +
+        '<option value="0" selected="">0</option>' +
+        '<option value="1">1</option>' +
+        '<option value="2">2</option>' +
+        '<option value="3">3</option>' +
+        '<option value="4">4</option>' +
+        '<option value="5">5</option>' +
+        '</select>' +
+        '</fieldset>' +
+        '</div>'
+      $("#FactorSelector").append(element)
+    }
+
+
+    //设置人时，人月
+    var humanhour = 28;
+    var monthhour = 167;
+    var preEffort = 0;
+    var effort = 0;
+
+    //服务端返回的数据
+    var res;
+
+    //究极jquery操作
+    $(document).ready(function () {
+      //Step 1
+      $("#inputFile").change(function () {
+        $("#fileName").text("已选择文件：" + $("#inputFile")[0].files[0].name);
+        var reader = new FileReader();
+        reader.readAsText($("#inputFile")[0].files[0], "UTF-8");//读取文件 
+        reader.onload = function (evt) { //读取完文件之后会回来这里
+          data = evt.target.result;
+        }
+      });
+
+
+      function getHTML(name, id) {
+        var element =
+          '<div class="col-lg-3">' +
+          '<div class="form-group">' +
+          '<label class="font-medium-1 text-bold-600">' + name + '</label>' +
+          '<div class="custom-control custom-checkbox m-0">' +
+          '<input type="checkbox" class="custom-control-input" id="' + id + '1st-item" value="1" name="' + id + '">' +
+          '<label class="custom-control-label font-small-2" for="' + id + '1st-item">外部输入</label>' +
+          '</div>' +
+          '<div class="custom-control custom-checkbox m-0">' +
+          '<input type="checkbox" class="custom-control-input" id="' + id + '2nd-item" value="2" name="' + id + '">' +
+          '<label class="custom-control-label font-small-2" for="' + id + '2nd-item">外部输出</label>' +
+          '</div>' +
+          '<div class="custom-control custom-checkbox m-0">' +
+          '<input type="checkbox" class="custom-control-input" id="' + id + '3rd-item" value="3" name="' + id + '">' +
+          '<label class="custom-control-label font-small-2" for="' + id + '3rd-item">外部查询</label>' +
+          '</div>' +
+          '<div class="custom-control custom-checkbox m-0">' +
+          '<input type="checkbox" class="custom-control-input" id="' + id + '4th-item" value="4" name="' + id + '">' +
+          '<label class="custom-control-label font-small-2" for="' + id + '4th-item">内部逻辑文件</label>' +
+          '</div>' +
+          '<div class="custom-control custom-checkbox m-0">' +
+          '<input type="checkbox" class="custom-control-input" id="' + id + '5th-item" value="5" name="' + id + '">' +
+          '<label class="custom-control-label font-small-2" for="' + id + '5th-item">外部接口文件</label>' +
+          '</div>' +
+          '</div>' +
+          '</div>'
+        return element;
+      }
+
+      function getEIHTML(i,name){
+        var element =
+                  '<div class="col-md-3">' +
+                  '<fieldset class="form-group">' +
+                  '<label for="' + 'ei' + i + '" class="font-medium-1 text-bold-400">' + name + '</label>' +
+                  '<select id="' + 'ei' + i + '" name="interested" class="form-control ei">' +
+                  '<option value="3" selected="">简单</option>' +
+                  '<option value="4">一般</option>' +
+                  '<option value="6">复杂</option>' +
+                  '</select>' +
+                  '</fieldset>' +
+                  '</div>'
+        return element;
+      }
+
+      function getEOHTML(i,name){
+        var element =
+                  '<div class="col-md-3">' +
+                  '<fieldset class="form-group">' +
+                  '<label for="' + 'eo' + i + '" class="font-medium-1 text-bold-400">' + name + '</label>' +
+                  '<select id="' + 'eo' + i + '" name="interested" class="form-control eo">' +
+                  '<option value="4" selected="">简单</option>' +
+                  '<option value="5">一般</option>' +
+                  '<option value="7">复杂</option>' +
+                  '</select>' +
+                  '</fieldset>' +
+                  '</div>'
+        return element;
+      }
+
+      function getEQHTML(i,name){
+        var element =
+                  '<div class="col-md-3">' +
+                  '<fieldset class="form-group">' +
+                  '<label for="' + 'eq' + i + '" class="font-medium-1 text-bold-400">' + name + '</label>' +
+                  '<select id="' + 'eq' + i + '" name="interested" class="form-control eq">' +
+                  '<option value="3" selected="">简单</option>' +
+                  '<option value="4">一般</option>' +
+                  '<option value="6">复杂</option>' +
+                  '</select>' +
+                  '</fieldset>' +
+                  '</div>'
+        return element;
+      }
+
+      function getILFHTML(i,name){
+        var element =
+                  '<div class="col-md-3">' +
+                  '<fieldset class="form-group">' +
+                  '<label for="' + 'ilf' + i + '" class="font-medium-1 text-bold-400">' + name + '</label>' +
+                  '<select id="' + 'ilf' + i + '" name="interested" class="form-control ilf">' +
+                  '<option value="5" selected="">简单</option>' +
+                  '<option value="7">一般</option>' +
+                  '<option value="10">复杂</option>' +
+                  '</select>' +
+                  '</fieldset>' +
+                  '</div>'
+        return element;
+      }
+
+      function getEIFHTML(i,name){
+        var element =
+                  '<div class="col-md-3">' +
+                  '<fieldset class="form-group">' +
+                  '<label for="' + 'eif' + i + '" class="font-medium-1 text-bold-400">' + name + '</label>' +
+                  '<select id="' + 'eif' + i + '" name="interested" class="form-control eif">' +
+                  '<option value="7" selected="">简单</option>' +
+                  '<option value="10">一般</option>' +
+                  '<option value="15">复杂</option>' +
+                  '</select>' +
+                  '</fieldset>' +
+                  '</div>'
+        return element;
+      }    
+
+      $("#checkBtn").click(function () {
+        $.ajax({
+          url: "http://127.0.0.1:8080/FPMetrics",
+          type: 'post',
+          async: false,//使用同步的方式,true为异步方式
+          processData: false,
+          data: data,
+          contentType: "application/xml",
+          success: function (res) {            
+            res = res;
+
+            //把第一步显示出来
+            $("#step1").show();
+
+            //step1 划分功能点
+            for (var i = 0; i < res.flowArrayList.length; i++) {
+              $("#checkFunctionArea").append(getHTML(res.flowArrayList[i].name, res.flowArrayList[i].id));
+            }
+            for (var i = 0; i < res.resourceArrayList.length; i++) {
+              $("#checkFunctionArea").append(getHTML(res.resourceArrayList[i].name, res.resourceArrayList[i].id));
+            }
+
+            //设置复选框点击触发函数
+            $(":checkbox").click(function () {
+              //清空数组
+              fun.length = 0;
+              for (var i = 0; i < 5; i++) {
+                fun.push(new Array());
+              }
+              for (var i = 0; i < res.flowArrayList.length; i++) {
+                var items = document.getElementsByName(res.flowArrayList[i].id);
+                for (var j = 0; j < items.length; j++) {
+                  if (items[j].checked) {
+                    fun[j].push(res.flowArrayList[i].name);
+                  }
+                }
+              }
+              for (var i = 0; i < res.resourceArrayList.length; i++) {
+                var items = document.getElementsByName(res.resourceArrayList[i].id);
+                for (var j = 0; j < items.length; j++) {
+                  if (items[j].checked) {
+                    fun[j].push(res.resourceArrayList[i].name);
+                  }
+                }
+              }
+
+
+              //设置外部输入的复杂程度
+              $("#eiTypeSelector").empty();
+              for (var i = 0; i < fun[0].length; i++) {
+                $('#eiTypeSelector').append(getEIHTML(i,fun[0][i]))
+              }
+
+              //设置外部输出的复杂程度
+              $("#eoTypeSelector").empty();
+              for (var i = 0; i < fun[1].length; i++) {
+                $('#eoTypeSelector').append(getEOHTML(i,fun[1][i]))
+              }
+
+              //设置外部查询的复杂程度
+              $("#eqTypeSelector").empty();
+              for (var i = 0; i < fun[2].length; i++) {
+                $('#eqTypeSelector').append(getEQHTML(i,fun[2][i]))
+              }
+
+              //设置内部逻辑文件的复杂程度
+              $("#ilfTypeSelector").empty();
+              for (var i = 0; i < fun[3].length; i++) {
+                $('#ilfTypeSelector').append(getILFHTML(i,fun[3][i]))
+              }   
+
+              //设置外部接口文件的复杂程度
+              $("#eifTypeSelector").empty();
+              for (var i = 0; i < fun[4].length; i++) {
+                $('#eifTypeSelector').append(getEIFHTML(i,fun[4][i]))
+              }
+              
+              //首先清0
+              ufc = 0;
+                         
+              $(".ei").change(function(){
+                //首先清0
+                ei = 0;
+                //遍历元素，进行累加
+                $(".ei").each(function (ii, vv) {
+                  ei = ei + parseInt($(vv).children('option:selected').val())
+                });
+                //计算ufc
+                ufc = ei + eo + eq + ilf + eif;
+                $("#ufc").val(ufc)
+                fp = ufc * vaf
+                $("#fp").val(fp.toFixed(0))   
+                preEffort = fp * humanhour;
+                effort = preEffort / monthhour;    
+                $("#effort").val(effort.toFixed(0))         
+              })
+
+              $(".eo").change(function(){
+                //首先清0
+                eo = 0;
+                //遍历元素，进行累加
+                $(".eo").each(function (ii, vv) {
+                  eo = eo + parseInt($(vv).children('option:selected').val())
+                });
+                //计算ufc
+                ufc = ei + eo + eq + ilf + eif;
+                $("#ufc").val(ufc)
+                fp = ufc * vaf
+                $("#fp").val(fp.toFixed(0))
+                preEffort = fp * humanhour;
+                effort = preEffort / monthhour;    
+                $("#effort").val(effort.toFixed(0))                  
+              })
+
+              $(".eq").change(function(){
+                //首先清0
+                eq = 0;
+                //遍历元素，进行累加
+                $(".eq").each(function (ii, vv) {
+                  eq = eq + parseInt($(vv).children('option:selected').val())
+                });
+                //计算ufc
+                ufc = ei + eo + eq + ilf + eif;
+                $("#ufc").val(ufc)
+                fp = ufc * vaf
+                $("#fp").val(fp.toFixed(0))
+                preEffort = fp * humanhour;
+                effort = preEffort / monthhour;    
+                $("#effort").val(effort.toFixed(0))                 
+              })
+
+              $(".ilf").change(function(){
+                //首先清0
+                ilf = 0;
+                //遍历元素，进行累加
+                $(".ilf").each(function (ii, vv) {
+                  ilf = ilf + parseInt($(vv).children('option:selected').val())
+                });
+                //计算ufc
+                ufc = ei + eo + eq + ilf + eif;
+                $("#ufc").val(ufc)
+                fp = ufc * vaf
+                $("#fp").val(fp.toFixed(0))
+                preEffort = fp * humanhour;
+                effort = preEffort / monthhour;    
+                $("#effort").val(effort.toFixed(0))                
+              })
+
+
+              $(".eif").change(function(){
+                //首先清0
+                eif = 0;
+                //遍历元素，进行累加
+                $(".eif").each(function (ii, vv) {
+                  eif = eif + parseInt($(vv).children('option:selected').val())
+                });
+                //计算ufc
+                ufc = ei + eo + eq + ilf + eif;
+                $("#ufc").val(ufc)
+                fp = ufc * vaf
+                $("#fp").val(fp.toFixed(0))
+                preEffort = fp * humanhour;
+                effort = preEffort / monthhour;    
+                $("#effort").val(effort.toFixed(0))  
+              })
+
+              //遍历元素，进行累加
+              $(".ei").change();
+              $(".eo").change();
+              $(".eq").change();
+              $(".ilf").change();  
+              $(".eif").change();
+            })
+          },
+          error: function (data) {
+          }
+        });
+      });
+
+
+
+      //Step 2 赋予权值          
+      $("#vaf").val(vaf)
+      fp = ufc * vaf
+      $("#fp").val(fp.toFixed(0))
+      preEffort = fp * humanhour;
+      effort = preEffort / monthhour;    
+      $("#effort").val(effort.toFixed(0))  
+      
+      //绑定事件函数
+      $('.factor').change(function () {
+        var factor = 0;
+        for (var i = 0; i < 14; i++) {
+          factor = factor + parseInt($("#factor" + i).children('option:selected').val())
+        }
+        vaf = 0.65 + (0.01 * factor)
+        $("#vaf").val(vaf.toFixed(3))
+        fp = ufc * vaf
+        $("#fp").val(fp.toFixed(0))
+        preEffort = fp * humanhour;
+        effort = preEffort / monthhour;    
+        $("#effort").val(effort.toFixed(0))  
+      })
+
+      //Step 4
+      $('#humanhour').on('change', function(){
+        humanhour = parseInt($("#humanhour").val())
+        preEffort = fp * humanhour;
+        effort = preEffort / monthhour;    
+        $("#effort").val(effort.toFixed(0))  
+      });
+
+      $('#monthhour').on('change', function(){
+        monthhour = parseInt($("#monthhour").val())
+        preEffort = fp * humanhour;
+        effort = preEffort / monthhour;    
+        $("#effort").val(effort.toFixed(0))  
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>
